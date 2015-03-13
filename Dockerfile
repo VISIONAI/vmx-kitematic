@@ -75,7 +75,7 @@ RUN \
 
 RUN mkdir -p /vmx/models
 
-#VOLUME /vmx/models
+VOLUME /vmx/models
 #VOLUME /vmx/sessions
 
 EXPOSE 3000
