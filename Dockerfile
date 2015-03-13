@@ -32,6 +32,7 @@ RUN \
   cd middle && \                                                         
   gzip -d ../middle.linux-master.tar.gz && \
   tar xf ../middle.linux-master.tar && \
+  rm ../middle.linux-master.tar && \
   echo "Version is " `cat version`
 
 #VOLUME /vmx/middle
@@ -53,7 +54,7 @@ RUN \
 
 ADD config.json /vmx/build/config.json
 
-#VOLUME /vmx/build
+VOLUME /vmx/build
 #VOLUME /vmx/data
 
 #####################   appbuilder
@@ -76,6 +77,8 @@ RUN \
 RUN mkdir -p /vmx/models
 
 VOLUME /vmx/models
+
+#Exposing this volume breaks the Kinematic install
 #VOLUME /vmx/sessions
 
 EXPOSE 3000
