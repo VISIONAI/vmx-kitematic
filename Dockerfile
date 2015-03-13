@@ -39,7 +39,7 @@ RUN \
 
 ###################### vmx-server
 
-RUN mkdir -p /vmx
+RUN mkdir -p /vmx/build
 WORKDIR /vmx
 
 RUN \
