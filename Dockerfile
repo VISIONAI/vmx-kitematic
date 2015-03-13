@@ -40,6 +40,8 @@ RUN \
 ###################### vmx-server
 
 RUN mkdir -p /vmx/build
+VOLUME /vmx/build
+
 WORKDIR /vmx
 
 RUN \
@@ -54,7 +56,7 @@ RUN \
 
 ADD config.json /vmx/build/config.json
 
-VOLUME /vmx/build
+
 #VOLUME /vmx/data
 
 #####################   appbuilder
