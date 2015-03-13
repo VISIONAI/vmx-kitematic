@@ -1,0 +1,4 @@
+destinationFolder=/root/MATLAB/R2014a
+agreeToLicense=yes
+outputFile=/root/matlabinstall_log
+mode=silent
