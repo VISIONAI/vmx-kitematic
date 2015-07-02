@@ -1,5 +1,5 @@
 
-[!visionai/vmx-kitematic](http://blog.vision.ai/images/visionai_kitematic.png)
+![visionai/vmx-kitematic](http://blog.vision.ai/images/visionai_kitematic.png)
 
 A single bundle which includes vision.ai's computer vision server,
 VMX, as a single Docker container.  This is intended to be installed
