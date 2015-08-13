@@ -6,23 +6,26 @@ VMX, as a single Docker container.  This is intended to be installed
 via Kitematic, a graphical user interface, for installation of Docker
 containers directly from Docker Hub.
 
+![kitematic-image](http://blog.vision.ai/images/visionai_kitematic.png)
+
 There is a description of the installation procedure in the following
-blog.vision.ai blog post from March 16th, 2015.
-[Dockerized Computer Vision for Mac via Kitematic](http://blog.vision.ai/vmx/2015/03/16/dockerized-computer-vision-for-mac-via-kitematic/)
+blog.vision.ai blog post from March 16th, 2015. [Dockerized Computer
+Vision](http://blog.vision.ai/vmx/2015/03/16/dockerized-computer-vision-for-mac-via-kitematic/)
 
 ### Installing with docker
 
 The container is automatically built on Docker Hub under
 [visionai/vmx-kitematic](https://registry.hub.docker.com/u/visionai/vmx-kitematic/). It
-can pull down with the following command:
+can be pulled down with the following command:
 ```
 docker pull visionai/vmx-kitematic
 ```
 
 ### Manually building the container
 
-I'm not sure why you'd want to do this, but if you want to build the
-container from source on your own machine, issue the following command:
+If you want to build the container from source on your own machine,
+issue the following command:
+
 ```
 docker build .
 ```
