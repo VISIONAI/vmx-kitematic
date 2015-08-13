@@ -20,7 +20,10 @@ RUN mkdir -p /root/matlab_installer
 ADD matlab_options.txt /root/matlab_installer/matlab_options.txt
 
 WORKDIR /root/matlab_installer
-RUN wget -nc http://www.mathworks.com/supportfiles/downloads/R2014a/deployment_files/R2014a/installers/glnxa64/MCR_R2014a_glnxa64_installer.zip && unzip MCR_R2014a_glnxa64_installer.zip && ./install -inputFile matlab_options.txt && rm -rf /root/matlab_installer
+RUN wget -nc http://www.mathworks.com/supportfiles/downloads/R2014a/deployment_files/R2014a/installers/glnxa64/MCR_R2014a_glnxa64_installer.zip && \
+    unzip MCR_R2014a_glnxa64_installer.zip && \
+    ./install -inputFile matlab_options.txt && 
+    rm -rf /root/matlab_installer
 #VOLUME /root/MATLAB
 
 #################  vmx middle
@@ -53,7 +56,7 @@ RUN \
   echo "Version is " `cat build/version` && \
   mkdir -p /vmx/data && \
   cd /vmx/data && \
-  wget -q http://files.vision.ai/vmx/pretrained/3f61ce5c7642bc2f24f7286f600b3e6b \
+  wget -q http://files.vision.ai/vmx/pretrained/3f61ce5c7642bc2f24f7286f600b3e6b && \
   wget -q http://files.vision.ai/vmx/pretrained/109e8c80074201cda9cfe4d167868337      
 
 ADD config.json /vmx/build/config.json
